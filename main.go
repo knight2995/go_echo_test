@@ -2,11 +2,14 @@ package main
 
 import (
 	"net/http"
-
+	"io/ioutil"
 	"github.com/labstack/echo/v4"
 )
 
 func main() {
+
+	d1 := []byte("hello\ngo\n")
+	ioutil.WriteFile("dat1", d1, 0644)
 
 	e := echo.New()
 	// 첫 화면

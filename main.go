@@ -11,7 +11,7 @@ func main() {
 	e := echo.New()
 	// 첫 화면
 	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello World!")
+		return c.String(http.StatusOK, "Hello World! 테스트중")
 	})
 
 	e.GET("/text/:text", getText)
